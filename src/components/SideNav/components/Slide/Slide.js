@@ -69,6 +69,12 @@ export function setTranslateValue(props, node) {
  * It uses [react-transition-group](https://github.com/reactjs/react-transition-group) internally.
  */
 class Slide extends React.Component {
+  frameRequestId = null;
+
+  mounted = false;
+
+  transition = null;
+
   componentDidMount() {
     // state.mounted handle SSR, once the component is mounted, we need
     // to properly hide it.
@@ -92,8 +98,6 @@ class Slide extends React.Component {
   componentWillUnmount() {
     window.cancelAnimationFrame(this.frameRequestId);
   }
-
-  frameRequestId = null;
 
   handleResize = () => {
     if (this.frameRequestId) {
@@ -128,10 +132,6 @@ class Slide extends React.Component {
       this.props.onEnter(node);
     }
   };
-
-  mounted = false;
-
-  transition = null;
 
   handleEntering = node => {
     const transitionProps = getTransitionProps(this.props, {

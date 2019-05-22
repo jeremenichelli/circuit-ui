@@ -56,7 +56,7 @@ class Tabs extends Component {
 
         const tabElement = (
           <Tab
-            key={index}
+            key={tabId}
             selected={selectedIndex === index}
             onClick={() => this.handleChange(index)}
             id={tabId}
@@ -68,7 +68,7 @@ class Tabs extends Component {
         );
         const tabPanelElement = (
           <TabPanel
-            key={index}
+            key={tabId}
             id={panelId}
             aria-labelledby={tabId}
             hidden={selectedIndex !== index}

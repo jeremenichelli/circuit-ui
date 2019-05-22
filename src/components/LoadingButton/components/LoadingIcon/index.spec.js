@@ -2,7 +2,7 @@ import React from 'react';
 
 import { LOADING_STATES } from '../../constants';
 import { sizes } from '../../../../styles/constants';
-import LoadingIcon from '../LoadingIcon';
+import LoadingIcon from '.';
 
 const { KILO, MEGA, GIGA } = sizes;
 

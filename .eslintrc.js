@@ -12,6 +12,8 @@ module.exports = {
     /**
      * Emotion 10 migration rules (end)
      */
+    'react/destructuring-assignment': [0, {}],
+    'react/require-default-props': [1, { forbidDefaultForRequired: false }],
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'no-use-before-define': ['error', { functions: false }],
     'no-underscore-dangle': 'off',

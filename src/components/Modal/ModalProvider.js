@@ -46,6 +46,7 @@ export class ModalProvider extends Component {
     }));
   };
 
+  // eslint-disable-next-line react/sort-comp
   contextValue = {
     setModal: this.setModal,
     getModal: () => this.state.modal

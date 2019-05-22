@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { MessageButton } from '../../';
+import { MessageButton } from '../..';
 
 describe('MessageButton', () => {
   /**

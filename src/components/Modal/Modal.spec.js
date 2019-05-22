@@ -38,7 +38,7 @@ describe('Modal', () => {
     children: ({ onClose }) => (
       <div>
         <div data-test="card">Hello World!</div>
-        <button data-test="close" onClick={onClose} />
+        <button type="button" data-test="close" onClick={onClose} />
       </div>
     ),
     // Disables the need for a wrapper. I couldn't get the Modal to work

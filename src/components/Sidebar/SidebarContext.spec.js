@@ -10,7 +10,11 @@ describe('SidebarContext', () => {
       <SidebarContextProvider>
         <SidebarContextConsumer>
           {({ toggleSidebar }) => (
-            <button data-selector="child" onClick={toggleSidebar} />
+            <button
+              type="button"
+              data-selector="child"
+              onClick={toggleSidebar}
+            />
           )}
         </SidebarContextConsumer>
       </SidebarContextProvider>

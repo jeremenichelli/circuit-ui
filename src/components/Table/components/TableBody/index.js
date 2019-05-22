@@ -19,29 +19,28 @@ const TableBody = ({ rows, rowHeaders, sortHover, onRowClick }) => (
         key={getRowKey(rowIndex)}
         onClick={onRowClick && (() => onRowClick(rowIndex))}
       >
-        {row.map(
-          (cell, cellIndex) =>
-            rowHeaders && cellIndex === 0 ? (
-              // eslint-disable-next-line react/no-array-index-key
-              <Fragment key={getCellKey(rowIndex, cellIndex)}>
-                <TableHeader
-                  fixed
-                  scope={TableHeader.ROW}
-                  isHovered={sortHover === cellIndex}
-                  {...mapProps(cell)}
-                />
-                <TableCell role="presentation" aria-hidden="true">
-                  {getChildren(cell)}
-                </TableCell>
-              </Fragment>
-            ) : (
-              <TableCell
-                // eslint-disable-next-line react/no-array-index-key
-                key={getCellKey(rowIndex, cellIndex)}
+        {row.map((cell, cellIndex) =>
+          rowHeaders && cellIndex === 0 ? (
+            // eslint-disable-next-line react/no-array-index-key
+            <Fragment key={getCellKey(rowIndex, cellIndex)}>
+              <TableHeader
+                fixed
+                scope={TableHeader.ROW}
                 isHovered={sortHover === cellIndex}
                 {...mapProps(cell)}
               />
-            )
+              <TableCell role="presentation" aria-hidden="true">
+                {getChildren(cell)}
+              </TableCell>
+            </Fragment>
+          ) : (
+            <TableCell
+              // eslint-disable-next-line react/no-array-index-key
+              key={getCellKey(rowIndex, cellIndex)}
+              isHovered={sortHover === cellIndex}
+              {...mapProps(cell)}
+            />
+          )
         )}
       </TableRow>
     ))}

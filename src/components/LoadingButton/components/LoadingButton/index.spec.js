@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { LOADING_STATES } from '../../constants';
-import LoadingButton from '../LoadingButton';
+import LoadingButton from '.';
 
 describe('LoadingButton', () => {
   describe('Style tests', () => {

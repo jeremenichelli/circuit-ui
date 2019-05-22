@@ -20,7 +20,7 @@ const alignmentStyles = ({ align }) => {
     [TOP]: 'flex-start'
   };
   return css`
-    label: message__button--${align};
+    label: ${`message__button--${align}`};
     align-self: ${alignments[align]};
   `;
 };

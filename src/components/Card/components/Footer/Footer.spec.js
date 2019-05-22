@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { CardFooter } from '../../';
+import { CardFooter } from '../..';
 
 describe('CardFooter', () => {
   /**
